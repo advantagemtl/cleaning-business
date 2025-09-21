@@ -10,7 +10,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
    <!-- site metas -->
-   <title>Prefix</title>
+   <title>Elite Cleaning Pros</title>
    <meta name="keywords" content="">
    <meta name="description" content="">
    <meta name="author" content="">
@@ -52,40 +52,40 @@
                   <li class="nav-item">
                      <a class="nav-link" href="#">Contact</a>
                   </li>
-                  
+
                </ul>
 
             </div>
          </nav>
       </div>
       <!-- banner section start -->
-      <div class="banner_section layout_padding">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-6">
-                  <h1 class="banner_taital">SAFE & <span style="color: #2b2b2b;">FLEXIBLE CLEANING</span></h1>
-                  <p class="banner_text">It is a long established fact that a reader will be distracted by the readable
-                     c</p>
-                  <div class="started_text"><a href="#">Read More</a></div>
-                  <div class="play_icon"><img src="images/play-icon.png"></div>
-               </div>
-               <div class="col-md-6">
-                  <div id="banner_slider" class="carousel slide" data-ride="carousel">
-                     <div class="carousel-inner">
-                        <div class="carousel-item active">
-                           <div class="banner_img"><img src="images/banner-img-3.png"></div>
-                        </div>
+      <div style="display:flex; justify-content: space-evenly;align-items:center; flex-direction:row; "
+         class="banner_section layout_padding">
+
+         <div style="display:flex; align-items: center; flex-direction:column" class="col-md-6">
+
+            <h1 class="banner_taital">
+               ELITE Cleanup for your home AND business
+               <br />
+               <span style="color: #2b2b2b;">BOOK IN 60 Seconds!</span>
+            </h1>
 
 
-                     </div>
-                     <a class="carousel-control-prev" href="#banner_slider" role="button" data-slide="prev">
-                        <i class="fa fa-angle-left"></i>
-                     </a>
-                     <a class="carousel-control-next" href="#banner_slider" role="button" data-slide="next">
-                        <i class="fa fa-angle-right"></i>
-                     </a>
+
+            <div class="started_text"><a href="#contact">BOOK HERE!</a></div>
+
+         </div>
+
+         <div class=" div-2">
+            <div id="banner_slider" class="carousel slide" data-ride="carousel">
+               <div class="carousel-inner">
+                  <div class="carousel-item active">
+                     <div class="banner_img"><img src="images/banner-img-3.png"></div>
                   </div>
+
+
                </div>
+
             </div>
          </div>
       </div>
@@ -99,20 +99,23 @@
          <div class="row">
             <div class="col-md-4">
                <h1 class="services_taital">WHY US?</h1>
-               <p class=" services_text">Page when looking at its layout. The point of using Lorem Ipsum is that it has
-                  a more-or-less normal distribution of letters, as opposed to</p>
-               <div class="readmore_btn"><a href="#">Read More</a></div>
+               <p class=" services_text">
+                  Mess? Gone. Homes and businesses? Protected. Family and employees? Safe. We clean fast, safe, and we
+                  never miss a spot! .
+               </p>
+               <div class="readmore_btn"><a href="#contact">BOOK HERE!</a></div>
+
             </div>
             <div class="col-md-8">
                <h1 class="services_taital">
                   <div class="services_box">
                      <div class="services_box_left">
                         <h5 class="fashion_text">Eco Friendly</h5>
-                        <div><img src="images/icon-1.png"></div>
+                        <div><img src="images/nature.png"></div>
                      </div>
                      <div class="services_box_right">
-                        <h5 class="fashion_text">Professional</h5>
-                        <div><img src="images/icon-2.png"></div>
+                        <h5 class="fashion_text">24-7 Customer Service</h5>
+                        <div><img src="images/online.png"></div>
                      </div>
                   </div>
                   <div class="services_box_2">
@@ -132,11 +135,11 @@
    </div>
    <!-- services section end -->
    <!-- contact section start -->
-   <div class="contact_section layout_padding">
+   <div id="contact" class="contact_section layout_padding">
       <div id="clean-form" class="container">
          <div class="row">
             <div class="col-sm-12 text-center">
-               <h1 class="contact_taital contact_heading">Book a Cleaning!</h1>
+               <h1 class="contact_taital contact_heading">Book </h1>
             </div>
          </div>
 
@@ -144,52 +147,264 @@
             <div class="row">
                <div class="col-md-12">
                   <div class="mail_section map_form_container">
-                     <form action="" method="POST" class="booking-form">
 
-                        <!-- NAME + EMAIL -->
-                        <div class="form-row">
-                           <input type="text" class="mail_text" placeholder="Your Name" name="name" required>
-                           <input type="email" class="mail_text" placeholder="Email" name="email" required>
+                     <form id="multiStepForm" class="booking-form">
+
+                        <!-- PROGRESS BAR -->
+                        <div style="margin-top:15px; margin-bottom:50px;" class="progress-bar-container">
+                           <div class="progress-bar" id="progressBar"></div>
+                           <div class="progress-steps">
+                              <span class="step active"></span>
+                              <span class="step"></span>
+                              <span class="step"></span>
+                              <span class="step"></span>
+                              <span class="step"></span>
+                           </div>
                         </div>
 
-                        <!-- PHONE + CLEANING TYPE -->
-                        <div class="form-row">
-                           <input type="tel" class="mail_text" placeholder="Phone Number" name="phone" required>
-                           <select class="mail_text" name="cleaning_type" required>
-                              <option value="">Select Cleaning Type</option>
-                              <option value="residential">Residential</option>
-                              <option value="commercial">Commercial</option>
-                           </select>
+                        <!-- STEP 1: Basic Contact -->
+                        <div class="form-step active">
+                           <h3>Step 1: Your Contact Info</h3>
+                           <div class="form-row">
+                              <input type="text" class="mail_text" placeholder="First Name" name="first_name" required>
+                              <input type="text" class="mail_text" placeholder="Last Name" name="last_name" required>
+                           </div>
+                           <div class="form-row">
+                              <input type="tel" class="mail_text" placeholder="Phone Number" name="phone" required>
+                              <input type="email" class="mail_text" placeholder="Email (optional)" name="email">
+                           </div>
                         </div>
 
-                        <div style="margin-top:30px; margin-bottom:-45px;" class="form-row">
-                           <h3>Preferred Date</h3>
+                        <!-- STEP 2: Address -->
+                        <div class="form-step">
+                           <h3>Step 2: Service Location</h3>
+                           <div class="form-row full-width">
+                              <input type="text" class="mail_text" placeholder="Full Address" name="address" required>
+                           </div>
+                           <div class="form-row">
+                              <input type="text" class="mail_text" placeholder="ZIP Code" name="zip" required>
+                           </div>
                         </div>
 
-                        <!-- DATE + TIME -->
-                        <div class="form-row">
-                           <input type="date" class="mail_text" name="date" required>
-                           <input type="time" class="mail_text" name="time" required>
+                        <!-- STEP 3: Service Details -->
+                        <div class="form-step">
+                           <h3>Step 3: Service Details</h3>
+                           <div class="form-row">
+                              <select class="mail_text" name="cleaning_type" required>
+                                 <option value="">Select Cleaning Type</option>
+                                 <option value="residential">Residential</option>
+                                 <option value="commercial">Commercial</option>
+                                 <option value="post_construction">Post-Construction</option>
+                                 <option value="move_in_out">Move-In / Move-Out</option>
+                              </select>
+                           </div>
+                           <div class="form-row">
+                              <input type="date" class="mail_text" id="booking-date" name="date" required>
+                              <input type="time" class="mail_text" name="time" value="10:00" required>
+                           </div>
                         </div>
 
-                        <!-- NOTES -->
-                        <div class="form-row full-width">
-                           <textarea class="massage-bt" placeholder="Special Instructions or Notes" rows="5"
-                              name="message"></textarea>
+                        <!-- STEP 4: Extra Notes -->
+                        <div class="form-step">
+                           <h3>Step 4: Special Instructions</h3>
+                           <div class="form-row full-width">
+                              <textarea class="massage-bt"
+                                 placeholder="Tell us anything important about your space or needs" rows="5"
+                                 name="message"></textarea>
+                           </div>
                         </div>
 
-                        <!-- SUBMIT BUTTON -->
-                        <div class="text-center">
-                           <button class="call_bt" type="submit">Book Now</button>
+                        <!-- STEP 5: Review & Submit -->
+                        <div class="form-step">
+                           <h3>Step 5: Review & Confirm</h3>
+                           <p>Please review your information before submitting.</p>
+                           <div id="reviewSection" class="review-box"></div>
+                        </div>
+
+                        <!-- NAVIGATION BUTTONS -->
+                        <div class="form-navigation">
+                           <button type="button" class="prev-btn" id="prevBtn" onclick="nextPrev(-1)">Back</button>
+                           <button type="button" class="next-btn" id="nextBtn" onclick="nextPrev(1)">Next</button>
+                           <button type="submit" class="call_bt" id="submitBtn" style="display:none;">Book Now</button>
                         </div>
 
                      </form>
+
                   </div>
                </div>
             </div>
          </div>
       </div>
    </div>
+
+
+   <style>
+      /* Progress bar */
+      .progress-bar-container {
+         position: relative;
+         margin-bottom: 20px;
+         height: 10px;
+         background: #e6e6e6;
+         border-radius: 5px;
+      }
+
+      .progress-bar {
+         height: 10px;
+         width: 0;
+         background: #00b894;
+         border-radius: 5px;
+         transition: width 0.3s ease;
+      }
+
+      .progress-steps {
+         display: flex;
+         justify-content: space-between;
+         margin-top: 10px;
+      }
+
+      .progress-steps .step {
+         width: 12px;
+         height: 12px;
+         background: #ccc;
+         border-radius: 50%;
+         transition: background 0.3s ease;
+      }
+
+      .progress-steps .step.active {
+         background: #00b894;
+      }
+
+      /* Steps */
+      .form-step {
+         display: none;
+      }
+
+      .form-step.active {
+         display: block;
+      }
+
+      /* Navigation */
+      .form-navigation {
+         display: flex;
+         justify-content: space-between;
+         margin-top: 20px;
+      }
+
+      .prev-btn,
+      .next-btn,
+      .call_bt {
+         padding: 10px 20px;
+         border: none;
+         background: #00b894;
+         color: #fff;
+         border-radius: 5px;
+         cursor: pointer;
+      }
+
+      .prev-btn {
+         background: #ccc;
+         color: #000;
+      }
+
+      /* Review box */
+      .review-box {
+         background: #f9f9f9;
+         padding: 15px;
+         border-radius: 5px;
+         border: 1px solid #ddd;
+      }
+
+      /* Input styling */
+      .mail_text,
+      .massage-bt,
+      select {
+         width: 100%;
+         padding: 10px;
+         margin-bottom: 10px;
+      }
+   </style>
+
+
+
+   <!-- form steps script  -->
+   <script>
+      let currentStep = 0;
+      const formSteps = document.querySelectorAll(".form-step");
+      const progressBar = document.getElementById("progressBar");
+      const progressSteps = document.querySelectorAll(".progress-steps .step");
+      const nextBtn = document.getElementById("nextBtn");
+      const prevBtn = document.getElementById("prevBtn");
+      const submitBtn = document.getElementById("submitBtn");
+
+      // Default date to today
+      document.addEventListener('DOMContentLoaded', () => {
+         const dateField = document.getElementById('booking-date');
+         const today = new Date().toISOString().split('T')[0];
+         dateField.value = today;
+      });
+
+      function showStep(n) {
+         formSteps.forEach((step, index) => step.classList.toggle('active', index === n));
+         updateButtons();
+         updateProgressBar();
+      }
+
+      function updateButtons() {
+         prevBtn.style.display = currentStep === 0 ? "none" : "inline-block";
+         nextBtn.style.display = currentStep === formSteps.length - 1 ? "none" : "inline-block";
+         submitBtn.style.display = currentStep === formSteps.length - 1 ? "inline-block" : "none";
+      }
+
+      function updateProgressBar() {
+         const progress = (currentStep / (formSteps.length - 1)) * 100;
+         progressBar.style.width = progress + "%";
+
+         progressSteps.forEach((step, index) => {
+            step.classList.toggle('active', index <= currentStep);
+         });
+      }
+
+      function nextPrev(n) {
+         if (n === 1 && !validateStep()) return false;
+
+         currentStep += n;
+
+         if (currentStep >= formSteps.length) {
+            document.getElementById("multiStepForm").submit();
+            return false;
+         }
+
+         if (currentStep === formSteps.length - 1) {
+            generateReview();
+         }
+
+         showStep(currentStep);
+      }
+
+      function validateStep() {
+         const inputs = formSteps[currentStep].querySelectorAll("input, select, textarea");
+         for (let input of inputs) {
+            if (input.hasAttribute("required") && !input.value) {
+               input.style.borderColor = "red";
+               return false;
+            } else {
+               input.style.borderColor = "#ccc";
+            }
+         }
+         return true;
+      }
+
+      function generateReview() {
+         const formData = new FormData(document.getElementById("multiStepForm"));
+         let html = "<h4>Review Your Details:</h4>";
+         for (let [key, value] of formData.entries()) {
+            html += `<p><strong>${key}:</strong> ${value}</p>`;
+         }
+         document.getElementById("reviewSection").innerHTML = html;
+      }
+
+      showStep(currentStep);
+   </script>
 
 
    <!-- contact section end -->
@@ -309,8 +524,8 @@
                   <h1 class="about_taital">About Us</h1>
                   <h6 class="about_text">Our reputation speaks for itself, with over 500 satisfied customers!</h6>
                   <div class="btn_main">
-                     <div class="started_bt"><a href="#">Book Cleaning</a></div>
-                     <div class="buy_bt active"><a href="#">View On Maps</a></div>
+                     <div class="started_bt"><a href="#contact">Book Cleaning</a></div>
+                     <div class="buy_bt active"><a href="#">View On Maps (coming soon)</a></div>
                   </div>
                </div>
             </div>
@@ -377,12 +592,15 @@
       <div class="container">
          <div class="row">
             <div class="col-sm-12">
-               <h1 class="customer_taital">What Is says Our customers</h1>
+               <h1 class="customer_taital">What Our Customers say</h1>
             </div>
          </div>
       </div>
+
       <div id="my_slider" class="carousel slide" data-ride="carousel">
          <div class="carousel-inner">
+
+            <!-- Testimonial 1 -->
             <div class="carousel-item active">
                <div class="customer_section_2">
                   <div class="container">
@@ -390,18 +608,15 @@
                         <div class="col-md-12">
                            <div class="box_main">
                               <div class="customer_main">
-                                 <p class="enim_text">has a more-or-less normal distribution of letters, as opposed to
-                                    using 'Content here, content here', making it look like readable English. Many
-                                    desktop publishing packages and web page editors has a more-or-less normal
-                                    distribution of letters, as opposed to using 'Content here, content here', making it
-                                    look like readable English. Many desktop publishing packages and web page editors
+                                 <p class="enim_text">
+                                    Prefix Cleaning transformed my home! Everything sparkles.
                                  </p>
                                  <div class="customer_left">
                                     <div class="customer_img"><img src="images/customer-img.png"></div>
                                  </div>
                                  <div class="customer_right">
-                                    <h3 class="customer_name">Content</h3>
-                                    <p class="web_text">And web page </p>
+                                    <h3 class="customer_name">Chadwick Thompson</h3>
+                                    <p class="web_text">Homeowner</p>
                                  </div>
                               </div>
                            </div>
@@ -410,6 +625,8 @@
                   </div>
                </div>
             </div>
+
+            <!-- Testimonial 2 -->
             <div class="carousel-item">
                <div class="customer_section_2">
                   <div class="container">
@@ -417,18 +634,15 @@
                         <div class="col-md-12">
                            <div class="box_main">
                               <div class="customer_main">
-                                 <p class="enim_text">has a more-or-less normal distribution of letters, as opposed to
-                                    using 'Content here, content here', making it look like readable English. Many
-                                    desktop publishing packages and web page editors has a more-or-less normal
-                                    distribution of letters, as opposed to using 'Content here, content here', making it
-                                    look like readable English. Many desktop publishing packages and web page editors
+                                 <p class="enim_text">
+                                    Fast, thorough, and professional — highly recommended!
                                  </p>
                                  <div class="customer_left">
                                     <div class="customer_img"><img src="images/customer-img.png"></div>
                                  </div>
                                  <div class="customer_right">
-                                    <h3 class="customer_name">Content</h3>
-                                    <p class="web_text">And web page </p>
+                                    <h3 class="customer_name">Whitney Carlisle</h3>
+                                    <p class="web_text">Business Owner</p>
                                  </div>
                               </div>
                            </div>
@@ -437,6 +651,8 @@
                   </div>
                </div>
             </div>
+
+            <!-- Testimonial 3 -->
             <div class="carousel-item">
                <div class="customer_section_2">
                   <div class="container">
@@ -444,18 +660,15 @@
                         <div class="col-md-12">
                            <div class="box_main">
                               <div class="customer_main">
-                                 <p class="enim_text">has a more-or-less normal distribution of letters, as opposed to
-                                    using 'Content here, content here', making it look like readable English. Many
-                                    desktop publishing packages and web page editors has a more-or-less normal
-                                    distribution of letters, as opposed to using 'Content here, content here', making it
-                                    look like readable English. Many desktop publishing packages and web page editors
+                                 <p class="enim_text">
+                                    They made our office spotless — even the corners I forget to clean!
                                  </p>
                                  <div class="customer_left">
                                     <div class="customer_img"><img src="images/customer-img.png"></div>
                                  </div>
                                  <div class="customer_right">
-                                    <h3 class="customer_name">Content</h3>
-                                    <p class="web_text">And web page </p>
+                                    <h3 class="customer_name">Evelyn Harper</h3>
+                                    <p class="web_text">Office Manager</p>
                                  </div>
                               </div>
                            </div>
@@ -464,88 +677,58 @@
                   </div>
                </div>
             </div>
+
          </div>
-         <a class="carousel-control-prev" href="#my_slider" role="button" data-slide="prev">
+
+         <!-- Carousel Controls -->
+         <!-- <a class="carousel-control-prev" href="#my_slider" role="button" data-slide="prev">
             <i class="fa fa-angle-left"></i>
          </a>
          <a class="carousel-control-next" href="#my_slider" role="button" data-slide="next">
             <i class="fa fa-angle-right"></i>
-         </a>
+         </a> -->
       </div>
+
+
    </div>
    <!-- customer section end -->
 
    <!-- footer section start -->
-   <div class="footer_section layout_padding">
+   <div class="footer_section layout_padding">  
       <div class="container">
          <div class="row">
             <div class="col-md-12">
                <div class="footer_logo"><img src="images/footer-logo.png"></div>
             </div>
          </div>
-         <div class="footer_section_2">
+         <div style="margin-bottom:25px;" class="footer_section_2">
             <div class="row">
                <div class="col-lg-3 col-sm-6">
                   <h2 class="useful_text">Useful link </h2>
                   <div class="footer_menu">
                      <ul>
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="sell.html">Sell</a></li>
-                        <li><a href="products.html">Products</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#contact">Book a Cleaning</a></li>
+                        <li><a href="about.html">Refund Policy</a></li>
                      </ul>
                   </div>
                </div>
-               <div class="col-lg-3 col-sm-6">
-                  <h2 class="useful_text">Portfolio</h2>
-                  <div class="footer_menu">
-                     <ul>
-                        <li><a href="#">LIodeno</a></li>
-                        <li><a href="jokri.html">Jokri</a></li>
-                        <li><a href="begana.html">Begana</a></li>
-                        <li><a href="sell.html">Sell</a></li>
-                        <li><a href="products.html">Products</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
-                     </ul>
-                  </div>
-               </div>
+           
                <div class="col-lg-3 col-sm-6">
                   <h2 class="useful_text">Contact Us</h2>
                   <div class="location_text"><img src="images/call-icon.png"><span class="padding_left_15"><a
-                           href="#">+01 1234567</a></span></div>
+                           href="#">+1(514) 473-3674</a></span></div>
                   <div class="location_text"><img src="images/mail-icon.png"><span class="padding_left_15"><a
-                           href="#">demo@gmail.com</a></span></div>
+                           href="#">prefixclean@gmail.com</a></span></div>
                </div>
-               <div class="col-lg-3 col-sm-6">
-                  <h2 class="useful_text">Social Link</h2>
-                  <p class="footer_text">It is a long established fact that a reader will be </p>
-                  <div class="social_icon">
-                     <ul>
-                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                     </ul>
-                  </div>
-               </div>
+
             </div>
          </div>
-         <div class="input_main">
-            <input type="text" class="email_text" placeholder="Enter your email" name="Enter your email">
-            <div class="subscribe_bt"><a href="#">Subscribe</a></div>
-         </div>
+         
       </div>
    </div>
    <!-- footer section end -->
-   <!-- copyright section start -->
-   <div class="copyright_section">
-      <div class="container">
-         <p class="copyright_text">2020 All Rights Reserved. Design by <a href="https://html.design">Free Html
-               Templates</a> Distribution by <a href="https://themewagon.com">ThemeWagon</a></p>
-      </div>
-   </div>
+
 
    <a class="fixed-phone" href="tel:5144733674">
       <i class="fas fa-phone"></i> CALL : 514-473-3674

@@ -370,7 +370,10 @@ button {
     text-transform: uppercase;
 }
 
+
+
 .started_text a:hover {
+    color:#28454e;
     color: #252525;
     background-color: #ffffff;
 }
@@ -1462,7 +1465,7 @@ input.email_text::placeholder {
 .fixed-phone {
   position: fixed;       /* stays in place while scrolling */
   right: 0;              /* stick to the right side */
-  top: 5%;              /* vertically centered */
+  bottom: 3%;              /* vertically centered */
   
   transform: translateY(-50%);
   background: #00c6aa;   /* green background */
@@ -1545,3 +1548,51 @@ select {
     padding:15px;
     padding:50px;
 }
+
+
+@media screen and (max-width: 765px) {
+  .div-2
+  {
+    display:none;
+  }
+}
+
+@media screen and (max-width: 765px) {
+  .banner_taital {
+    width: 100%;
+    display: block;
+    text-align: center; /* centers text on small screens */
+    white-space: normal; /* allows line breaks naturally */
+  }
+
+  #clean-form
+  {
+    width:95%;
+  }
+  
+}
+
+@media screen and (max-width: 770px) {
+  /* Reduce spacing between headings and rows */
+  .form-step h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 1.2rem; /* optional: smaller heading for mobile */
+  }
+
+  .form-row {
+    margin-bottom: 10px; /* smaller spacing between inputs */
+    gap: 5px; /* if using flex or grid, reduce gaps */
+  }
+
+  .progress-bar-container {
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+
+  .form-navigation {
+    margin-top: 15px; /* tighter navigation buttons */
+  }
+}
+
+
